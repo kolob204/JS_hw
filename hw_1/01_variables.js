@@ -1,4 +1,4 @@
-'use distinct'
+'use strict'
 
 let item_1;
 

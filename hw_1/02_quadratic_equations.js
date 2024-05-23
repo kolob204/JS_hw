@@ -1,4 +1,4 @@
-
+'use strict'
 
 const quadraticEquation = (a, b, c) => {
     if(a == 0)
