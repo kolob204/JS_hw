@@ -3,19 +3,17 @@
 const quadraticEquation = (a, b, c) => {
     if(a == 0)
         return false;
-    let res = {};
+    const res = {};
     const D = b * b - 4 * a * c;
-   
+    res.roots = [];
+    
     if(D < 0)
-        return false;
-    res['discriminant'] = D;
+        return false; 
     if(D == 0)
-        res["roots"] = (-b + Math.sqrt(D)) / (2 * a);
-    else if(D > 0){
-        let roots = [];
-        roots.push((-b + Math.sqrt(D)) / (2 * a));
-        roots.push((-b - Math.sqrt(D)) / (2 * a));
-        res["roots"] = roots;
+        res.roots = (-b + Math.sqrt(D)) / (2 * a);
+    else if(D > 0){ 
+        res.roots.push((-b + Math.sqrt(D)) / (2 * a));
+        res.roots.push((-b - Math.sqrt(D)) / (2 * a)); 
     }
     return res;
 }
