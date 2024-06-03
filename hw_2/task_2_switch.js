@@ -30,9 +30,7 @@ switch (true) {
 // Проверить тип данных
 //======================================================
 
-const isNotNumer = (a) => {
-    return !(Object.prototype.toString.call(a).slice(8, -1).toLowerCase() == "number");
-}
+const isNotNumer = (a) => typeof a !== 'number';
  
 switch (true) {
     case (isNotNumer(age) || isNotNumer(age2) || isNotNumer(age3)): {
