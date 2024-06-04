@@ -24,7 +24,7 @@ convertBytes(16565846123, "Gb")
 
 const makeTriangle = (hOfTriangle) => {
 
-    for (i = hOfTriangle; i >= 1; i--) {
+    for (let i = hOfTriangle; i >= 1; i--) {
         console.log(" ".repeat(i - 1) + "*".repeat(hOfTriangle - i + (hOfTriangle - i + 1)));
     }
 
@@ -35,11 +35,11 @@ makeTriangle(15);
 
 const makeRomb = (hOfRomb) => {
 
-    for (i = hOfRomb; i >= 1; i--) {
+    for (let i = hOfRomb; i >= 1; i--) {
         console.log(" ".repeat(i - 1) + "*".repeat(hOfRomb - i + (hOfRomb - i + 1)));
     }
 
-    for (i = 1; i < hOfRomb; i++) {
+    for (let i = 1; i < hOfRomb; i++) {
         console.log(" ".repeat(i) + "*".repeat(hOfRomb - i + (hOfRomb - i - 1)));
     }
  
@@ -48,8 +48,7 @@ const makeRomb = (hOfRomb) => {
 makeRomb(5);
 //===============================================
 
-for(i=1; i<=100; i++) {
-    console.log(i);
+for(let i=1; i<=100; i++) { 
 
     if (!(i % 3)) {
         console.log(i % 5 ? `Число ${i} делится на 3` : `Число ${i} делится на 3 и на 5`);
@@ -64,10 +63,10 @@ for(i=1; i<=100; i++) {
 
 const makeCamelCase = (inputString) => {
     
-    console.log(inputString[0].toLowerCase() + inputString.slice(1,inputString.lenght).replaceAll(/ (\W)/g, (match, p1) => p1.toUpperCase()))
+    return inputString[0].toLowerCase() + inputString.slice(1).replaceAll(/ (\W)/g, (match, p1) => p1.toUpperCase());
 }
 
-makeCamelCase('Я у мамы инженер')
+console.log(makeCamelCase('Я у мамы инженер'))
 
 
 //===============================================

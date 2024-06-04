@@ -70,7 +70,7 @@ const encode = (inputString) => {
 const decode = (inputString) => {
     let result = "";
     for (let i = 0; i <= inputString.length - 1; i++) {
-        code = inputString.charCodeAt(i);
+        const code = inputString.charCodeAt(i);
         switch (true) {
             case (isInRange(code, ruBigLetters)): {
                 result += getOffsetedCharFromRangeForDecode(inputString.charCodeAt(i), ruBigLetters);

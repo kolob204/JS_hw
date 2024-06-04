@@ -7,6 +7,7 @@ const age2 = 18;
 
 const age3 = 90;
 
+
 switch (true) {
     case (age < age2 && age > 1): {
         console.log("You don't have access cause your age is " + age + " i'ts less then ");
@@ -31,7 +32,7 @@ switch (true) {
 //======================================================
 
 const isNotNumer = (a) => {
-    return !(Object.prototype.toString.call(a).slice(8, -1).toLowerCase() == "number");
+    return (a) => typeof a !== 'number';
 }
  
 switch (true) {
@@ -62,8 +63,7 @@ switch (true) {
 // Преобразование
 //======================================================
 
-const canBeANumber = (a, b, c) => {
-    if (Number(a) && Number(b) && Number(c)) return true;
+const canBeANumber = (a, b, c) => { Number(a) && Number(b) && Number(c) 
 }
 
 if (canBeANumber(age, age2, age3)) {
